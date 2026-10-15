@@ -5,7 +5,7 @@ const path = require("node:path");
 const { execSync } = require("node:child_process");
 const os = require("node:os");
 
-const REPO_URL = "https://github.com/light-cms/zinecontent.git";
+const REPO_URL = "https://github.com/light-cms/zine_content.git";
 const REPO_BRANCH = "main";
 
 // Mapping from source directory in blogs_md to destination directory in blog and default layout
