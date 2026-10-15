@@ -1,0 +1,18 @@
+[tools]
+"github:kristoff-it/ziggy" = "latest"
+"github:kristoff-it/zine" = "latest"
+"github:pratyay360/md2smd" = "latest"
+node = "latest"
+superhtml = "latest"
+
+[settings]
+experimental = true
+
+
+[tasks.fetch]
+run = "node scripts/fetch.js"
+description = "fetch the latest posts"
+
+[tasks.build]
+run = ["mise fetch", "zine release -f", "npx -y pagefind --site public"]
+description = "build the site"
